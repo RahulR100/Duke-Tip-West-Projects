@@ -1,0 +1,30 @@
+div.fixed-center {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: auto;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+td {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	border: 1px solid black;
+}
+.boom {
+	background-image: linear-gradient(to bottom,#d9534f 0,#c12e2a 100%);
+}
+/*[mine] {
+	background-color: black;
+}*/
+.flag {
+	background-image: linear-gradient(to bottom,#f0ad4e 0,#eb9316 100%);
+}
+[clicked] {
+	background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+<head>
+	<meta charset="UTF-8">
+	<title>TTT trial</title>
+	<link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<h2>Tic-Tac-Toe</h2>
+<p id="msg" style="color: green; position: absolute; top: -30px;"></p>
+<p id="turns" style="position: absolute; top: -50px;"></p>
+<button onclick="location.reload();" style="position: absolute; bottom: -50px;">Start new game.</button>
+<table>
+	<tr>
+		<td onclick="addPawn(this.id);" id="11"></td>
+		<td onclick="addPawn(this.id);" id="12"></td>
+		<td onclick="addPawn(this.id);" id="13"></td>
+	</tr>
+	<tr>
+		<td onclick="addPawn(this.id);" id="21"></td>
+		<td onclick="addPawn(this.id);" id="22"></td>
+		<td onclick="addPawn(this.id);" id="23"></td>
+	</tr>
+	<tr>
+		<td onclick="addPawn(this.id);" id="31"></td>
+		<td onclick="addPawn(this.id);" id="32"></td>
+		<td onclick="addPawn(this.id);" id="33"></td>
+	</tr>
+</table>
+<script src="./run.js"></script>
+</body>
+</html>
