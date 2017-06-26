@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RPN calculator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<style>
+		div#cont {
+			position: fixed;
+		    top: 50%;
+		    left: 50%;
+		    width: auto;
+		    height: auto;
+		    -webkit-transform: translate(-50%,-50%);
+		    -moz-transform: translate(-50%,-50%);
+		    -ms-transform: translate(-50%,-50%);
+		    -o-transform: translate(-50%,-50%);
+		    transform: translate(-50%,-50%);
+		}
+		textarea {
+			resize: none;
+		}
+		button {
+			width: 35px;
+			height: 35px;
+		}
+	</style>
+</head>
+<body>
+	<br><div class="container-fluid"><div class="alert alert-info" role="alert">Calculator: (This works in reverse Polish notation. Give a space after each number or operator)</div></div>
+	<div id="cont" class="text-center">
+		<table style="width: 150px;" class="table table-bordered">
+			<tr>
+				<td colspan="4"><textarea id="inp" rows="4" cols="25"></textarea></td>
+			</tr>
+			<tr>
+				<td><button onclick="add(' ');" class="btn btn-default">_</button></td>
+				<td><button class="btn disabled btn-default">(</button></td>
+				<td><button class="btn disabled btn-default">)</button></td>
+				<td><button onclick="add('/');" class="btn btn-default">/</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="add(7);" class="btn btn-default">7</button></td>
+				<td><button onclick="add(8);" class="btn btn-default">8</button></td>
+				<td><button onclick="add(9);" class="btn btn-default">9</button></td>
+				<td><button onclick="add('*');" class="btn btn-default">x</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="add(4);" class="btn btn-default">4</button></td>
+				<td><button onclick="add(5);" class="btn btn-default">5</button></td>
+				<td><button onclick="add(6);" class="btn btn-default">6</button></td>
+				<td><button onclick="add('-');" class="btn btn-default">-</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="add(1);" class="btn btn-default">1</button></td>
+				<td><button onclick="add(2);" class="btn btn-default">2</button></td>
+				<td><button onclick="add(3);" class="btn btn-default">3</button></td>
+				<td><button onclick="add('+');" class="btn btn-default">+</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="add(0);" class="btn btn-default">0</button></td>
+				<td><button onclick="cls();" class="btn btn-warning">C</button></td>
+				<td><button onclick="calc();" class="btn btn-primary">=</button></td>
+				<td><button onclick="add('.');" class="btn btn-default">.</button></td>
+			</tr>
+		</table>
+	</div>
+	<script src="./run.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false;">
+<head>
+	<meta charset="UTF-8">
+	<title>Pong</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+	<div class="fixed-center">
+		<h2>Pong:</h2>
+		<p>For blue paddle, use W and S to go up and down and A and D to reduce or increase sensitivity.<br> For red paddle, use Up and Down arrows to go up and down and Left and Right arrows to reduce or increase sensitivity.</p>
+		<div id="messages">
+			<div class="form-inline">
+			  	<div class="form-group">
+			  	  	<label for="max_score">Score to win: </label>
+			  	  	<input type="number" class="form-control" id="max_score" value="15" required="true">
+			  	</div>
+			  	<button onclick="game();" class="btn btn-primary">Start game!</button>
+			</div>
+		</div>
+		<table id="data_table" class="table">
+		<thead>
+			<tr>
+				<th>Player</th>
+				<th>Score</th>
+				<th>Hits</th>
+				<th>Paddle sensitivity</th>
+				<th>Ball Velocity</th>
+				<th>Timer</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th id="blue_name">Blue</th>
+				<td id="blue_score">0</td>
+				<td id="blue_hits">0</td>
+				<td id="blue_sens">10</td>
+				<td id="velocity">5</td>
+				<td id="timer">00:00</td>
+			</tr>
+			<tr>
+				<th id="red_name">Red</th>
+				<td id="red_score">0</td>
+				<td id="red_hits">0</td>
+				<td id="red_sens">10</td>
+				<td id="sep" colspan="2"><div class="btn-group" role="group"><button id="stp" onclick="togGame();" class="btn btn-warning">Pause game.</button><button id="edg" data-toggle="tooltip" data-placement="top" title="Warning: this will end the game and you will loose your score." onclick="location.reload();" class="btn btn-warning">End game.</button></div></td>
+			</tr>
+		</tbody>
+		</table>
+		<canvas id="board" width="1000" height="600"></canvas>
+	</div>
+	
+	<script src="./plugins.js"></script>
+	<script src="./run.js"></script>
+</body>
+</html>

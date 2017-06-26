@@ -1,0 +1,50 @@
+* {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*transition: 0.2s;*/
+}
+.fixed-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.fixed-vertical-center
+{
+    position: fixed;
+    top: 50%;
+    width: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+canvas {
+	border: 1px solid black;
+}
+div#messages {
+	height: 67px;
+}
+button#stp {
+    visibility: hidden;
+}
+button#edg {
+    visibility: hidden;
+}
+th#blue_name {
+    color: #337ab7;
+}
+th#red_name {
+    color: #d9534f;
+}
